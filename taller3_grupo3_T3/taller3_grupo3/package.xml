@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>taller3_grupo3</name>
+  <version>0.0.0</version>
+  <description>
+    Taller 3 — Sistema robótico de clasificación de objetos
+    con ROS 2, OpenCV y control GPIO en Raspberry Pi 5.
+  </description>
+  <maintainer email="grupo3@uniandes.edu.co">grupo3</maintainer>
+  <license>Apache-2.0</license>
+
+  <!-- ── Dependencias Taller 2 (conservadas) ─────────────────────────── -->
+  <depend>rclpy</depend>
+  <depend>geometry_msgs</depend>
+  <depend>std_msgs</depend>
+  <depend>std_srvs</depend>
+  <depend>example_interfaces</depend>
+  <depend>nav_msgs</depend>
+
+  <!-- ── Dependencias nuevas Taller 3 ────────────────────────────────── -->
+  <depend>sensor_msgs</depend>
+  <depend>cv_bridge</depend>
+
+  <!-- ── Interfaces personalizadas (srv/PlayFile.srv) ────────────────── -->
+  <build_depend>rosidl_default_generators</build_depend>
+  <exec_depend>rosidl_default_runtime</exec_depend>
+  <member_of_group>rosidl_interface_packages</member_of_group>
+
+  <!-- ── Teleop con joystick ──────────────────────────────────────────── -->
+  <exec_depend>teleop_twist_joy</exec_depend>
+  <exec_depend>joy</exec_depend>
+
+  <test_depend>ament_copyright</test_depend>
+  <test_depend>ament_flake8</test_depend>
+  <test_depend>ament_pep257</test_depend>
+  <test_depend>python3-pytest</test_depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>
